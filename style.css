@@ -7,12 +7,11 @@
 /* Design */
 /* Layout: top bar with page links, fixed-width profile column on the left, one reading column on the right. Set like a LaTeX article. */
 :root{
-  --paper:#fdfdfb; --ink:#1b1b1f; --muted:#5d5d66; --rule:#d9d9d4; --link:#1f3f8f; --tint:#f1f1ec;
+  color-scheme:light;
+  --paper:#ffffff; --ink:#000000; --muted:#444444; --rule:#d0d0d0; --link:#1a3a94; --tint:#f2f2f2;
   --serif:'LM Roman','Latin Modern Roman','CMU Serif','Computer Modern',Georgia,'Times New Roman',serif;
   --caps:'LM Roman Caps','LM Roman',Georgia,serif;
 }
-@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--paper:#17181c;--ink:#e9e8e3;--muted:#a3a39c;--rule:#35363c;--link:#9db7ff;--tint:#202127;color-scheme:dark}}
-:root[data-theme="dark"]{--paper:#17181c;--ink:#e9e8e3;--muted:#a3a39c;--rule:#35363c;--link:#9db7ff;--tint:#202127;color-scheme:dark}
 *{box-sizing:border-box}
 body{background:var(--paper);color:var(--ink);font-family:var(--serif);font-size:18px;line-height:1.5;padding-inline:20px}
 a{color:var(--link);text-decoration:none}
@@ -57,3 +56,6 @@ details.abs summary{cursor:pointer;color:var(--link);font-style:italic;width:fit
 details.abs p{margin:8px 0 0;color:var(--ink);font-size:.96rem;line-height:1.5;padding-left:14px;border-left:2px solid var(--rule)}
 .cvframe{width:100%;height:80vh;min-height:520px;border:1px solid var(--rule);background:var(--tint)}
 .cvopen{margin-bottom:14px}
+.paper{overflow:hidden}
+.paper img.fig{float:right;width:170px;height:auto;margin:4px 0 8px 22px;border:1px solid var(--rule)}
+@media (max-width:560px){.paper img.fig{float:none;display:block;width:100%;max-width:260px;margin:0 0 10px}}
